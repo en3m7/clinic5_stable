@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Запись на приём | ЛОР-клиника</title>
+    <meta name="description" content="Онлайн запись на приём к ЛОР-врачу. Выберите врача, удобное время, услуги. Скидка 10% на онлайн-запись.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="theme.css">
+    <link rel="stylesheet" href="appointment.css">
+</head>
+<body>
+    <!-- ХЕДЕР -->
+    <header class="header">
+        <div class="container">
+            <div class="header-top">
+                <div class="header-contacts">
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+7 (495) 123-45-67</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <span>Пн-Пт: 8:00-21:00, Сб-Вс: 9:00-18:00</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>г. Фрязино, ул. Московская, 15</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="header-main">
+                <a href="index.html" class="logo">
+                    <i class="fas fa-stethoscope"></i>
+                    <span>ЛОР-Клиника</span>
+                </a>
+                
+                <nav class="nav">
+                    <ul class="nav-list">
+                        <li><a href="index.html" class="nav-link">Главная</a></li>
+                        <li><a href="services.html" class="nav-link">Услуги</a></li>
+                        <li><a href="operations.html" class="nav-link">Операции</a></li>
+                        <li><a href="prices.html" class="nav-link">Цены</a></li>
+                        <li><a href="doctors.html" class="nav-link">Врачи</a></li>
+                        <li><a href="appointment.html" class="nav-link active">Запись</a></li>
+                        <li><a href="contacts.html" class="nav-link">Контакты</a></li>
+                        <li><a href="about.html" class="nav-link">О клинике</a></li>
+                    </ul>
+                </nav>
+                
+                <!-- БЛОК АВТОРИЗАЦИИ -->
+                <div class="auth-buttons" id="authButtons">
+                    <!-- Заполняется JavaScript -->
+                </div>
+                
+                <button class="burger">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ОСНОВНОЙ КОНТЕНТ -->
+    <main class="appointment-page">
+        <div class="container">
+            <div class="page-header">
+                <h1>Онлайн запись на приём</h1>
+                <p>Выберите врача, удобное время и услуги. Заполните форму и мы свяжемся с вами для подтверждения записи.</p>
+            </div>
+            
+            <!-- ПРОГРЕСС БАР -->
+            <div class="progress-container">
+                <div class="progress-line"></div>
+                
+                <div class="progress-step active" id="step1-progress">
+                    <div class="progress-dot">1</div>
+                    <div class="progress-label">Выбор врача</div>
+                </div>
+                
+                <div class="progress-step" id="step2-progress">
+                    <div class="progress-dot">2</div>
+                    <div class="progress-label">Дата и время</div>
+                </div>
+                
+                <div class="progress-step" id="step3-progress">
+                    <div class="progress-dot">3</div>
+                    <div class="progress-label">Услуги</div>
+                </div>
+                
+                <div class="progress-step" id="step4-progress">
+                    <div class="progress-dot">4</div>
+                    <div class="progress-label">Ваши данные</div>
+                </div>
+            </div>
+            
+            <!-- ШАГ 1: ВЫБОР ВРАЧА -->
+            <div class="step-card" id="step1">
+                <div class="step-header">
+                    <div class="step-number">1</div>
+                    <div>
+                        <h2 class="step-title">Выбор врача</h2>
+                        <p class="step-description">Выберите специалиста для записи на приём</p>
+                    </div>
+                </div>
+                
+                <div class="notification notification-emergency">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <div>
+                        <h3>Экстренная помощь!</h3>
+                        <p>При острых состояниях (температура выше 39°, сильная боль, травмы, кровотечения):</p>
+                        <p class="emergency-phone">+7 (999) 325-88-075</p>
+                        <p class="emergency-note">Круглосуточно, приём без записи в экстренных случаях</p>
+                    </div>
+                </div>
+                
+                <div class="doctors-grid">
+                    <!-- Врач 1 -->
+                    <div class="doctor-card" data-doctor="ivanov">
+                        <div class="doctor-badge available">Доступен сегодня</div>
+                        <div class="doctor-avatar">
+                            <i class="fas fa-user-md"></i>
+                        </div>
+                        <h3 class="doctor-name">Иванов А. В.</h3>
+                        <p class="doctor-specialty">ЛОР-хирург высшей категории</p>
+                        
+                        <div class="doctor-info">
+                            <div class="info-item">
+                                <i class="fas fa-graduation-cap"></i>
+                                <span>Д.м.н.</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-history"></i>
+                                <span>Стаж 25 лет</span>
+                            </div>
+                        </div>
+                        
+                        <div class="doctor-schedule">
+                            <div class="schedule-title">
+                                <i class="fas fa-calendar-alt"></i>
+                                График работы
+                            </div>
+                            <div class="schedule-days">Пн, Вт, Чт, Пт</div>
+                            <div class="schedule-hours">9:00 - 18:00</div>
+                        </div>
+                        
+                        <button class="btn btn-primary select-doctor" data-doctor="ivanov">
+                            <i class="fas fa-check-circle"></i>
+                            Выбрать врача
+                        </button>
+                    </div>
+                    
+                    <!-- Врач 2 -->
+                    <div class="doctor-card" data-doctor="petrova">
+                        <div class="doctor-badge tomorrow">Доступен завтра</div>
+                        <div class="doctor-avatar">
+                            <i class="fas fa-user-md"></i>
+                        </div>
+                        <h3 class="doctor-name">Петрова Е. С.</h3>
+                        <p class="doctor-specialty">Детский ЛОР, к.м.н.</p>
+                        
+                        <div class="doctor-info">
+                            <div class="info-item">
+                                <i class="fas fa-graduation-cap"></i>
+                                <span>К.м.н.</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-history"></i>
+                                <span>Стаж 18 лет</span>
+                            </div>
+                        </div>
+                        
+                        <div class="doctor-schedule">
+                            <div class="schedule-title">
+                                <i class="fas fa-calendar-alt"></i>
+                                График работы
+                            </div>
+                            <div class="schedule-days">Ср, Чт, Пт, Сб</div>
+                            <div class="schedule-hours">10:00 - 17:00</div>
+                        </div>
+                        
+                        <button class="btn btn-primary select-doctor" data-doctor="petrova">
+                            <i class="fas fa-check-circle"></i>
+                            Выбрать врача
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- ШАГ 2: ДАТА И ВРЕМЯ -->
+            <div class="step-card" id="step2" style="display: none;">
+                <div class="step-header">
+                    <div class="step-number">2</div>
+                    <div>
+                        <h2 class="step-title">Выбор даты и времени</h2>
+                        <p class="step-description">Выберите удобную дату и время приёма</p>
+                    </div>
+                </div>
+                
+                <div id="doctorInfo" class="doctor-info-box">
+                    <i class="fas fa-user-md"></i>
+                    <div>
+                        <h3>Врач не выбран</h3>
+                        <p>Выберите дату и время приёма</p>
+                    </div>
+                </div>
+                
+                <h3>Выберите дату:</h3>
+                <div class="date-picker" id="datePicker">
+                    <!-- Даты генерируются JavaScript -->
+                </div>
+                
+                <h3 id="timeTitle">Выберите время:</h3>
+                <div class="time-grid" id="timeGrid">
+                    <!-- Время генерируется JavaScript -->
+                </div>
+                
+                <div class="notification notification-warning" id="timeNotification" style="display: none;">
+                    <i class="fas fa-clock"></i>
+                    <div id="timeMessage"></div>
+                </div>
+                
+                <div class="navigation-buttons">
+                    <button class="btn btn-prev" id="prevStep1">
+                        <i class="fas fa-arrow-left"></i>
+                        Назад к выбору врача
+                    </button>
+                    <button class="btn btn-next" id="nextStep2" disabled>
+                        Далее к выбору услуг
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- ШАГ 3: УСЛУГИ -->
+            <div class="step-card" id="step3" style="display: none;">
+                <div class="step-header">
+                    <div class="step-number">3</div>
+                    <div>
+                        <h2 class="step-title">Выбор услуг</h2>
+                        <p class="step-description">Выберите необходимые медицинские услуги</p>
+                    </div>
+                </div>
+                
+                <div class="services-grid-appointment">
+                    <!-- Услуга 1 -->
+                    <label class="service-option">
+                        <input type="checkbox" name="service" value="Консультация ЛОРа" data-price="2500">
+                        <div class="service-card-appointment">
+                            <div class="service-icon">
+                                <i class="fas fa-stethoscope"></i>
+                            </div>
+                            <h3 class="service-name">Консультация ЛОРа</h3>
+                            <p class="service-description">Первичный осмотр, диагностика, назначение лечения</p>
+                            <div class="service-price">2 500 ₽</div>
+                        </div>
+                    </label>
+                    
+                    <!-- Услуга 2 -->
+                    <label class="service-option">
+                        <input type="checkbox" name="service" value="Видеоэндоскопия" data-price="1800">
+                        <div class="service-card-appointment">
+                            <div class="service-icon">
+                                <i class="fas fa-video"></i>
+                            </div>
+                            <h3 class="service-name">Видеоэндоскопия</h3>
+                            <p class="service-description">Осмотр ЛОР-органов с видеозаписью</p>
+                            <div class="service-price">1 800 ₽</div>
+                        </div>
+                    </label>
+                    
+                    <!-- Услуга 3 -->
+                    <label class="service-option">
+                        <input type="checkbox" name="service" value="Аудиометрия" data-price="1500">
+                        <div class="service-card-appointment">
+                            <div class="service-icon">
+                                <i class="fas fa-assistive-listening-systems"></i>
+                            </div>
+                            <h3 class="service-name">Аудиометрия</h3>
+                            <p class="service-description">Исследование остроты слуха</p>
+                            <div class="service-price">1 500 ₽</div>
+                        </div>
+                    </label>
+                    
+                    <!-- Услуга 4 -->
+                    <label class="service-option">
+                        <input type="checkbox" name="service" value="Детский приём" data-price="2800">
+                        <div class="service-card-appointment">
+                            <div class="service-icon">
+                                <i class="fas fa-child"></i>
+                            </div>
+                            <h3 class="service-name">Детский приём</h3>
+                            <p class="service-description">Осмотр ребёнка, консультация детского ЛОРа</p>
+                            <div class="service-price">2 800 ₽</div>
+                        </div>
+                    </label>
+                </div>
+                
+                <div class="price-summary">
+                    <h3>Стоимость услуг</h3>
+                    <div class="price-row">
+                        <span class="price-label">Стоимость выбранных услуг:</span>
+                        <span class="price-value" id="servicesPrice">0 ₽</span>
+                    </div>
+                    <div class="price-row price-discount">
+                        <span class="price-label">Скидка 10% на онлайн-запись:</span>
+                        <span class="price-value" id="discountPrice">0 ₽</span>
+                    </div>
+                    <div class="price-row">
+                        <span class="price-label">Итого к оплате:</span>
+                        <span class="price-value price-total" id="totalPrice">0 ₽</span>
+                    </div>
+                </div>
+                
+                <div class="notification notification-info">
+                    <i class="fas fa-percentage"></i>
+                    <div>
+                        <h3>Скидка 10% на онлайн-запись</h3>
+                        <p>При записи через сайт вы получаете автоматическую скидку 10% на все услуги.</p>
+                        <p>Скидка применяется при первом онлайн-заказе.</p>
+                    </div>
+                </div>
+                
+                <div class="navigation-buttons">
+                    <button class="btn btn-prev" id="prevStep2">
+                        <i class="fas fa-arrow-left"></i>
+                        Назад к выбору времени
+                    </button>
+                    <button class="btn btn-next" id="nextStep3">
+                        Далее к вашим данным
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- ШАГ 4: ДАННЫЕ -->
+            <div class="step-card" id="step4" style="display: none;">
+                <div class="step-header">
+                    <div class="step-number">4</div>
+                    <div>
+                        <h2 class="step-title">Ваши данные</h2>
+                        <p class="step-description">Заполните контактную информацию для записи</p>
+                    </div>
+                </div>
+                
+                <div id="appointmentSummary" class="summary-box">
+                    <!-- Сводка записи -->
+                </div>
+                
+                <h3>Контактная информация</h3>
+                
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label class="form-label required">Фамилия Имя Отчество</label>
+                        <input type="text" class="form-input" id="fullName" 
+                               placeholder="Иванов Иван Иванович" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label required">Телефон</label>
+                        <input type="tel" class="form-input" id="phone" 
+                               placeholder="+7 (999) 123-45-67" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Email (для подтверждения)</label>
+                        <input type="email" class="form-input" id="email" 
+                               placeholder="ваш@email.ru">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Дата рождения</label>
+                        <input type="date" class="form-input" id="birthDate">
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label">Жалобы или симптомы</label>
+                    <textarea class="form-input" id="symptoms" rows="4"
+                              placeholder="Опишите ваши симптомы, хронические заболевания, аллергии..."></textarea>
+                </div>
+                
+                <div class="notification notification-info">
+                    <i class="fas fa-shield-alt"></i>
+                    <div>
+                        <h3>Конфиденциальность данных</h3>
+                        <p>Все ваши данные защищены и используются только для записи на приём.</p>
+                        <p>Мы не передаём вашу информацию третьим лицам.</p>
+                    </div>
+                </div>
+                
+                <div class="navigation-buttons">
+                    <button class="btn btn-prev" id="prevStep3">
+                        <i class="fas fa-arrow-left"></i>
+                        Назад к выбору услуг
+                    </button>
+                    <button class="btn btn-submit" id="submitAppointment">
+                        <i class="fas fa-paper-plane"></i>
+                        Отправить запись
+                    </button>
+                </div>
+            </div>
+            
+            <!-- РЕЗУЛЬТАТ -->
+            <div class="result-container" id="resultStep" style="display: none;">
+                <div class="result-success">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                
+                <h2 class="result-title">Запись успешно оформлена!</h2>
+                <p>Мы получили вашу заявку и свяжемся с вами для подтверждения записи.</p>
+                <p>Номер вашей заявки: <strong id="appointmentNumber">#000000</strong></p>
+                
+                <div class="result-details" id="resultDetails">
+                    <!-- Детали записи -->
+                </div>
+                
+                <div class="result-buttons">
+                    <button class="btn btn-primary" onclick="window.location.href='index.html'">
+                        <i class="fas fa-home"></i>
+                        Вернуться на главную
+                    </button>
+                    <button class="btn btn-secondary" onclick="window.location.reload()">
+                        <i class="fas fa-calendar-plus"></i>
+                        Создать новую запись
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- ФУТЕР -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <h4 class="footer-title">ЛОР-Клиника</h4>
+                    <p>Специализированная клиника лечения заболеваний уха, горла, носа.</p>
+                </div>
+                <div>
+                    <h4 class="footer-title">Запись на приём</h4>
+                    <p>Онлайн: эта страница<br>Телефон: +7 (495) 123-45-67</p>
+                </div>
+                <div>
+                    <h4 class="footer-title">Экстренная помощь</h4>
+                    <p>+7 (999) 325-88-075<br>Круглосуточно</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2024 ЛОР-клиника. Лицензия № ЛО-77-01-012345
+            </div>
+        </div>
+    </footer>
+
+    <!-- ПЕРЕКЛЮЧАТЕЛЬ ТЕМ -->
+    <div class="theme-switcher">
+        <div class="theme-buttons">
+            <button class="theme-btn active" data-theme="light" title="Светлая тема">
+                <i class="fas fa-sun"></i>
+            </button>
+            <button class="theme-btn" data-theme="dark" title="Тёмная тема">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script src="appointment.js"></script>
+</body>
+</html>

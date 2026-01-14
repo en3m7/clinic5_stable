@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Цены на ЛОР-услуги | ЛОР-клиника</title>
+    <meta name="description" content="Прайс-лист на ЛОР-услуги: консультации, диагностика, операции. Прозрачные цены без скрытых платежей.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="theme.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-top">
+                <div class="header-contacts">
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+7 (495) 123-45-67</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <span>Пн-Пт: 8:00-21:00, Сб-Вс: 9:00-18:00</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>г. Фрязино, ул. Московская, 15</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="header-main">
+                <a href="index.html" class="logo">
+                    <i class="fas fa-stethoscope"></i>
+                    <span>ЛОР-Клиника</span>
+                </a>
+                
+                <nav class="nav">
+                    <ul class="nav-list">
+                        <li><a href="index.html" class="nav-link">Главная</a></li>
+                        <li><a href="services.html" class="nav-link">Услуги</a></li>
+                        <li><a href="operations.html" class="nav-link">Операции</a></li>
+                        <li><a href="prices.html" class="nav-link active">Цены</a></li>
+                        <li><a href="doctors.html" class="nav-link">Врачи</a></li>
+                        <li><a href="appointment.html" class="nav-link">Запись</a></li>
+                        <li><a href="contacts.html" class="nav-link">Контакты</a></li>
+                        <li><a href="about.html" class="nav-link">О клинике</a></li>
+                    </ul>
+                </nav>
+                
+                <!-- БЛОК АВТОРИЗАЦИИ -->
+                <div class="auth-buttons" id="authButtons">
+                    <!-- Заполняется JavaScript -->
+                </div>
+                
+                <button class="burger">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Цены на ЛОР-услуги</h1>
+                <p class="hero-subtitle">Прозрачный прайс-лист. Окончательная стоимость определяется после консультации.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Консультации и диагностика</h2>
+            <table class="price-table">
+                <thead>
+                    <tr>
+                        <th>Услуга</th>
+                        <th>Описание</th>
+                        <th>Стоимость</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Первичная консультация ЛОРа</td>
+                        <td>Осмотр, сбор анамнеза, назначение обследования</td>
+                        <td class="price-value">2 500 ₽</td>
+                    </tr>
+                    <tr>
+                        <td>Повторная консультация</td>
+                        <td>В течение 1 месяца после первичного приёма</td>
+                        <td class="price-value">1 800 ₽</td>
+                    </tr>
+                    <tr>
+                        <td>Консультация детского ЛОРа</td>
+                        <td>Осмотр ребёнка, консультация, рекомендации</td>
+                        <td class="price-value">2 800 ₽</td>
+                    </tr>
+                    <tr>
+                        <td>Видеоэндоскопия носа и носоглотки</td>
+                        <td>Осмотр с записью на диск, распечатка фото</td>
+                        <td class="price-value">1 800 ₽</td>
+                    </tr>
+                    <tr>
+                        <td>Эндоскопия гортани</td>
+                        <td>Осмотр голосовых связок, гортани</td>
+                        <td class="price-value">2 200 ₽</td>
+                    </tr>
+                    <tr>
+                        <td>Аудиометрия</td>
+                        <td>Исследование остроты слуха</td>
+                        <td class="price-value">1 500 ₽</td>
+                    </tr>
+                    <tr>
+                        <td>Тимпанометрия</td>
+                        <td>Исследование функции среднего уха</td>
+                        <td class="price-value">1 200 ₽</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <section class="section" style="background: var(--gray-100);">
+        <div class="container">
+            <h2 class="section-title">ЛОР-операции</h2>
+            <table class="price-table">
+                <thead>
+                    <tr>
+                        <th>Операция</th>
+                        <th>Методика</th>
+                        <th>Стоимость от</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Септопластика</td>
+                        <td>Эндоскопическая, с тампонадой</td>
+                        <td class="price-value">45 000 ₽</td>
+                    </tr>
+                    <tr>
+                        <td>Полипотомия носа</td>
+                        <td>Эндоскопическое удаление полипов</td>
+                        <td class="price-value">35 000 ₽</td>
+                    </tr>
+                    <tr>
+                        <td>Вазотомия</td>
+                        <td>Лазерная/радиоволновая, амбулаторно</td>
+                        <td class="price-value">20 000 ₽</td>
+                    </tr>
+                    <tr>
+                        <td>Тонзиллэктомия</td>
+                        <td>Коблационная или лазерная</td>
+                        <td class="price-value">30 000 ₽</td>
+                    </tr>
+                    <tr>
+                        <td>Аденотомия</td>
+                        <td>Эндоскопическая, под контролем зрения</td>
+                        <td class="price-value">25 000 ₽</td>
+                    </tr>
+                    <tr>
+                        <td>Тимпанопластика</td>
+                        <td>Восстановление барабанной перепонки</td>
+                        <td class="price-value">50 000 ₽</td>
+                    </tr>
+                    <tr>
+                        <td>Стапедопластика</td>
+                        <td>При отосклерозе, протезирование</td>
+                        <td class="price-value">70 000 ₽</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p style="margin-top: 20px; font-style: italic; color: var(--gray-600);">
+                * В стоимость операции включено: анестезия, пребывание в стационаре, послеоперационные осмотры.
+            </p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Детская ЛОР-помощь</h2>
+            <table class="price-table">
+                <thead>
+                    <tr>
+                        <th>Услуга</th>
+                        <th>Возраст</th>
+                        <th>Стоимость</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Консультация детского ЛОРа</td>
+                        <td>0-18 лет</td>
+                        <td class="price-value">2 800 ₽</td>
+                    </tr>
+                    <tr>
+                        <td>Аденотомия у детей</td>
+                        <td>3-14 лет</td>
+                        <td class="price-value">25 000 ₽</td>
+                    </tr>
+                    <tr>
+                        <td>Удаление миндалин у детей</td>
+                        <td>5-18 лет</td>
+                        <td class="price-value">35 000 ₽</td>
+                    </tr>
+                    <tr>
+                        <td>Шунтирование барабанной полости</td>
+                        <td>3-12 лет</td>
+                        <td class="price-value">15 000 ₽</td>
+                    </tr>
+                    <tr>
+                        <td>Удаление инородного тела</td>
+                        <td>любой</td>
+                        <td class="price-value">от 3 000 ₽</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <section class="section" style="background: var(--primary-light);">
+        <div class="container">
+            <h2 class="section-title">Скидки и акции</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3 class="service-title">Скидка 10%</h3>
+                    <p>При онлайн-записи через сайт действует скидка 10% на все услуги (кроме операций).</p>
+                    <div class="service-price">-10%</div>
+                    <a href="appointment.html" class="btn btn-primary">Записаться онлайн</a>
+                </div>
+                
+                <div class="service-card">
+                    <h3 class="service-title">Семейная скидка</h3>
+                    <p>При записи двух и более членов семьи - скидка 15% на консультации для всех.</p>
+                    <div class="service-price">-15%</div>
+                    <button class="btn btn-primary" data-modal="appointment">Узнать подробности</button>
+                </div>
+                
+                <div class="service-card">
+                    <h3 class="service-title">Пенсионерам</h3>
+                    <p>Для пенсионеров скидка 10% на все услуги (при предъявлении пенсионного удостоверения).</p>
+                    <div class="service-price">-10%</div>
+                    <button class="btn btn-primary" data-modal="appointment">Записаться со скидкой</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <h4 class="footer-title">ЛОР-Клиника</h4>
+                    <p>Специализированная клиника лечения заболеваний уха, горла, носа с 2005 года.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-vk"></i></a>
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="footer-title">Контакты</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> г. Фрязино, ул. Московская, 15</p>
+                    <p><i class="fas fa-phone"></i> +7 (495) 123-45-67</p>
+                    <p><i class="fas fa-envelope"></i> info@lor-clinic.ru</p>
+                </div>
+                <div>
+                    <h4 class="footer-title">Часы работы</h4>
+                    <p><i class="fas fa-clock"></i> Пн-Пт: 8:00-21:00</p>
+                    <p><i class="fas fa-clock"></i> Сб-Вс: 9:00-18:00</p>
+                    <p><i class="fas fa-ambulance"></i> Экстренно: круглосуточно</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 ЛОР-клиника. Цены действительны на 01.12.2023</p>
+                <p>Сайт не является публичной офертой</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Модальное окно для уточнения стоимости -->
+    <div class="modal" id="appointment">
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <h2>Уточнить стоимость</h2>
+            <form>
+                <div class="form-group">
+                    <label class="form-label required">ФИО</label>
+                    <input type="text" class="form-input" required placeholder="Иванов Иван Иванович">
+                </div>
+                <div class="form-group">
+                    <label class="form-label required">Телефон</label>
+                    <input type="tel" class="form-input" required placeholder="+7 (999) 123-45-67">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Интересующая услуга</label>
+                    <textarea class="form-input" rows="3" placeholder="Например: септопластика, консультация детского ЛОРа..."></textarea>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Тип скидки</label>
+                    <select class="form-input">
+                        <option value="">Без скидки</option>
+                        <option>Онлайн-запись (-10%)</option>
+                        <option>Семейная (-15%)</option>
+                        <option>Пенсионер (-10%)</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary">Уточнить стоимость</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="theme-switcher">
+        <div class="theme-buttons">
+            <button class="theme-btn active" data-theme="light" title="Светлая тема">
+                <i class="fas fa-sun"></i>
+            </button>
+            <button class="theme-btn" data-theme="dark" title="Тёмная тема">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

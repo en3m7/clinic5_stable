@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация - ЛОР-клиника</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="theme.css">
+    <style>
+        .register-container {
+            max-width: 600px;
+            margin: 50px auto;
+            background: white;
+            border-radius: var(--radius-lg);
+            padding: 40px;
+            box-shadow: var(--shadow-lg);
+        }
+        .form-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 25px 0;
+        }
+        .error-message {
+            color: var(--danger);
+            font-size: 12px;
+            margin-top: 5px;
+            display: none;
+        }
+        .success-message {
+            background: #d4edda;
+            color: #155724;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+            text-align: center;
+            display: none;
+        }
+        .login-link {
+            text-align: center;
+            margin-top: 25px;
+            color: var(--gray-600);
+        }
+        .login-link a {
+            color: var(--primary);
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-top">
+                <div class="header-contacts">
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+7 (495) 123-45-67</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <span>Пн-Пт: 8:00-21:00, Сб-Вс: 9:00-18:00</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>г. Фрязино, ул. Московская, 15</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="header-main">
+                <a href="index.html" class="logo">
+                    <i class="fas fa-stethoscope"></i>
+                    <span>ЛОР-Клиника</span>
+                </a>
+                
+                <nav class="nav">
+                    <ul class="nav-list">
+                        <li><a href="index.html" class="nav-link">Главная</a></li>
+                        <li><a href="services.html" class="nav-link">Услуги</a></li>
+                        <li><a href="operations.html" class="nav-link">Операции</a></li>
+                        <li><a href="prices.html" class="nav-link">Цены</a></li>
+                        <li><a href="doctors.html" class="nav-link">Врачи</a></li>
+                        <li><a href="appointment.html" class="nav-link">Запись</a></li>
+                        <li><a href="contacts.html" class="nav-link">Контакты</a></li>
+                        <li><a href="about.html" class="nav-link">О клинике</a></li>
+                    </ul>
+                </nav>
+                
+                <!-- БЛОК АВТОРИЗАЦИИ -->
+                <div class="auth-buttons" id="authButtons">
+                    <!-- Заполняется JavaScript -->
+                </div>
+                
+                <button class="burger">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="section" style="min-height: 70vh;">
+        <div class="container">
+            <div class="register-container">
+                <h1 style="color: var(--primary); text-align: center; margin-bottom: 10px;">
+                    <i class="fas fa-user-plus"></i> Регистрация пациента
+                </h1>
+                <p style="text-align: center; color: var(--gray-600); margin-bottom: 30px;">
+                    Заполните форму для создания личного кабинета
+                </p>
+                
+                <div id="successMessage" class="success-message"></div>
+                
+                <form id="registerForm" novalidate>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label class="form-label required">Фамилия *</label>
+                            <input type="text" class="form-input" id="lastName" 
+                                   placeholder="Иванов" required>
+                            <div class="error-message" id="lastNameError"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label required">Имя *</label>
+                            <input type="text" class="form-input" id="firstName" 
+                                   placeholder="Иван" required>
+                            <div class="error-message" id="firstNameError"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">Отчество</label>
+                            <input type="text" class="form-input" id="middleName" 
+                                   placeholder="Иванович">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label required">Дата рождения *</label>
+                            <input type="date" class="form-input" id="birthDate" required>
+                            <div class="error-message" id="birthDateError"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label required">Телефон *</label>
+                            <input type="tel" class="form-input" id="phone" 
+                                   placeholder="+7 (999) 123-45-67" required>
+                            <div class="error-message" id="phoneError"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label required">Email *</label>
+                            <input type="email" class="form-input" id="email" 
+                                   placeholder="ваш@email.ru" required>
+                            <div class="error-message" id="emailError"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label required">Пароль *</label>
+                            <input type="password" class="form-input" id="password" 
+                                   placeholder="Не менее 6 символов" required minlength="6">
+                            <div class="error-message" id="passwordError"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label required">Повторите пароль *</label>
+                            <input type="password" class="form-input" id="passwordConfirm" 
+                                   placeholder="Повторите пароль" required>
+                            <div class="error-message" id="passwordConfirmError"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group" style="margin-top: 25px;">
+                        <label style="display: flex; align-items: flex-start; gap: 10px; cursor: pointer;">
+                            <input type="checkbox" id="agreement" required style="margin-top: 3px;">
+                            <span style="font-size: 14px;">
+                                Я согласен на обработку персональных данных и принимаю 
+                                <a href="#" style="color: var(--primary);">политику конфиденциальности</a>
+                            </span>
+                        </label>
+                        <div class="error-message" id="agreementError"></div>
+                    </div>
+                    
+                    <div class="form-group" style="margin-top: 30px;">
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">
+                            <i class="fas fa-user-plus"></i>
+                            Зарегистрироваться
+                        </button>
+                    </div>
+                </form>
+                
+                <div class="login-link">
+                    <p>Уже есть аккаунт? <a href="login.html">Войти</a></p>
+                    <p style="margin-top: 10px;">
+                        <a href="index.html"><i class="fas fa-arrow-left"></i> Вернуться на главную</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <h4 class="footer-title">ЛОР-Клиника</h4>
+                    <p>Специализированная клиника лечения заболеваний уха, горла, носа.</p>
+                </div>
+                <div>
+                    <h4 class="footer-title">Контакты</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> г. Фрязино, ул. Московская, 15</p>
+                    <p><i class="fas fa-phone"></i> +7 (495) 123-45-67</p>
+                </div>
+                <div>
+                    <h4 class="footer-title">Регистрация</h4>
+                    <p>Создайте личный кабинет для записи на приём и доступа к истории визитов</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2023 ЛОР-клиника. Лицензия № ЛО-77-01-012345
+            </div>
+        </div>
+
+
+
+    
+        <div style="text-align: center; margin-top: 30px; padding-top: 20px; border-top: 1px solid var(--gray-700);">
+            <a href="index.html" style="
+                display: inline-flex;
+                align-items: center;
+                gap: 10px;
+                padding: 12px 25px;
+                background: var(--primary);
+                color: white;
+                border-radius: var(--radius-md);
+                text-decoration: none;
+                font-weight: 500;
+                transition: all 0.3s ease;
+            ">
+                <i class="fas fa-home"></i>
+                Вернуться на главную
+            </a>
+            
+            <p style="margin-top: 15px; color: var(--gray-500); font-size: 14px;">
+                ЛОР-клиника © 2023. Все права защищены.
+            </p>
+        </div>
+
+        <style>
+            a[href="index.html"]:hover {
+                background: var(--primary-dark);
+                transform: translateY(-2px);
+                box-shadow: var(--shadow-md);
+            }
+        </style>
+    </footer>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Проверка авторизации
+        const currentUser = JSON.parse(localStorage.getItem('lorCurrentUser'));
+        if (currentUser) {
+            window.location.href = 'profile.html';
+        }
+        
+        // Обновление кнопок в хедере
+        function updateAuthButtons() {
+            const authButtons = document.getElementById('authButtons');
+            if (!authButtons) return;
+            
+            const user = JSON.parse(localStorage.getItem('lorCurrentUser'));
+            
+            if (user) {
+                authButtons.innerHTML = `
+                    <a href="profile.html" class="user-profile-btn">
+                        <i class="fas fa-user-circle"></i>
+                        <span>${user.firstName} ${user.lastName.charAt(0)}.</span>
+                    </a>
+                `;
+            } else {
+                authButtons.innerHTML = `
+                    <a href="login.html" class="btn btn-secondary btn-sm">
+                        <i class="fas fa-sign-in-alt"></i> Войти
+                    </a>
+                    <a href="register.html" class="btn btn-primary btn-sm">
+                        <i class="fas fa-user-plus"></i> Регистрация
+                    </a>
+                `;
+            }
+        }
+        
+        updateAuthButtons();
+        
+        // Форматирование телефона
+        const phoneInput = document.getElementById('phone');
+        if (phoneInput) {
+            phoneInput.addEventListener('input', function(e) {
+                let value = e.target.value.replace(/\D/g, '');
+                
+                if (value.length > 0) {
+                    if (value.startsWith('7') || value.startsWith('8')) {
+                        value = '7' + value.substring(1);
+                    } else if (!value.startsWith('7')) {
+                        value = '7' + value;
+                    }
+                    
+                    let formatted = '+7';
+                    if (value.length > 1) formatted += ' (' + value.substring(1, 4);
+                    if (value.length >= 4) formatted += ') ' + value.substring(4, 7);
+                    if (value.length >= 7) formatted += '-' + value.substring(7, 9);
+                    if (value.length >= 9) formatted += '-' + value.substring(9, 11);
+                    
+                    e.target.value = formatted.substring(0, 18);
+                }
+            });
+        }
+        
+        // Кириллица для ФИО
+        ['lastName', 'firstName', 'middleName'].forEach(id => {
+            const input = document.getElementById(id);
+            if (input) {
+                input.addEventListener('input', function(e) {
+                    e.target.value = e.target.value.replace(/[^А-Яа-яЁё\s\-]/g, '');
+                });
+            }
+        });
+        
+        // Проверка паролей
+        const password = document.getElementById('password');
+        const passwordConfirm = document.getElementById('passwordConfirm');
+        
+        function checkPasswords() {
+            if (password.value && passwordConfirm.value && password.value !== passwordConfirm.value) {
+                document.getElementById('passwordConfirmError').textContent = 'Пароли не совпадают';
+                document.getElementById('passwordConfirmError').style.display = 'block';
+                passwordConfirm.style.borderColor = 'var(--danger)';
+                return false;
+            } else {
+                document.getElementById('passwordConfirmError').style.display = 'none';
+                passwordConfirm.style.borderColor = '';
+                return true;
+            }
+        }
+        
+        if (password && passwordConfirm) {
+            password.addEventListener('input', checkPasswords);
+            passwordConfirm.addEventListener('input', checkPasswords);
+        }
+        
+        // Отправка формы
+        const form = document.getElementById('registerForm');
+        const successMessage = document.getElementById('successMessage');
+        
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Сброс ошибок
+            document.querySelectorAll('.error-message').forEach(el => {
+                el.style.display = 'none';
+                el.textContent = '';
+            });
+            
+            document.querySelectorAll('.form-input').forEach(input => {
+                input.style.borderColor = '';
+            });
+            
+            let isValid = true;
+            
+            // Проверка обязательных полей
+            const requiredFields = ['lastName', 'firstName', 'birthDate', 'phone', 'email', 'password', 'passwordConfirm'];
+            requiredFields.forEach(id => {
+                const input = document.getElementById(id);
+                if (!input.value.trim()) {
+                    document.getElementById(id + 'Error').textContent = 'Обязательное поле';
+                    document.getElementById(id + 'Error').style.display = 'block';
+                    input.style.borderColor = 'var(--danger)';
+                    isValid = false;
+                }
+            });
+            
+            // Проверка паролей
+            if (!checkPasswords()) {
+                isValid = false;
+            }
+            
+            // Проверка email
+            const email = document.getElementById('email').value.toLowerCase();
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (email && !emailRegex.test(email)) {
+                document.getElementById('emailError').textContent = 'Некорректный email';
+                document.getElementById('emailError').style.display = 'block';
+                document.getElementById('email').style.borderColor = 'var(--danger)';
+                isValid = false;
+            }
+            
+            // Проверка уникальности email
+            const users = JSON.parse(localStorage.getItem('lorUsers') || '[]');
+            if (users.some(user => user.email === email)) {
+                document.getElementById('emailError').textContent = 'Этот email уже зарегистрирован';
+                document.getElementById('emailError').style.display = 'block';
+                document.getElementById('email').style.borderColor = 'var(--danger)';
+                isValid = false;
+            }
+            
+            // Проверка соглашения
+            if (!document.getElementById('agreement').checked) {
+                document.getElementById('agreementError').textContent = 'Необходимо согласие';
+                document.getElementById('agreementError').style.display = 'block';
+                isValid = false;
+            }
+            
+            if (!isValid) return;
+            
+            // Создание пользователя
+            const user = {
+                id: Date.now(),
+                email: email,
+                password: password.value, // В проде хэшировать!
+                lastName: document.getElementById('lastName').value.trim(),
+                firstName: document.getElementById('firstName').value.trim(),
+                middleName: document.getElementById('middleName')?.value.trim() || null,
+                birthDate: document.getElementById('birthDate').value,
+                phone: document.getElementById('phone').value,
+                registrationDate: new Date().toISOString()
+            };
+            
+            // Сохранение
+            users.push(user);
+            localStorage.setItem('lorUsers', JSON.stringify(users));
+            localStorage.setItem('lorCurrentUser', JSON.stringify(user));
+            
+            // Показ успешного сообщения
+            successMessage.innerHTML = `
+                <i class="fas fa-check-circle"></i>
+                <h3>Регистрация успешна!</h3>
+                <p>Вы будете перенаправлены в личный кабинет через 3 секунды...</p>
+            `;
+            successMessage.style.display = 'block';
+            
+            // Редирект
+            setTimeout(() => {
+                window.location.href = 'profile.html';
+            }, 3000);
+        });
+        
+        // Бургер меню
+        const burger = document.querySelector('.burger');
+        const nav = document.querySelector('.nav');
+        
+        if (burger && nav) {
+            burger.addEventListener('click', () => {
+                burger.classList.toggle('active');
+                nav.classList.toggle('active');
+                document.body.style.overflow = nav.classList.contains('active') ? 'hidden' : '';
+            });
+        }
+    });
+    </script>
+</body>
+</html>

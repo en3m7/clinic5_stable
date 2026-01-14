@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ЛОР-клиника | Главная</title>
+    <meta name="description" content="Специализированная ЛОР-клиника в Москве. Диагностика и лечение заболеваний уха, горла, носа. Современное оборудование, опытные врачи.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="theme.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-top">
+                <div class="header-contacts">
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+7 (495) 123-45-67</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <span>Пн-Пт: 8:00-21:00, Сб-Вс: 9:00-18:00</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>г. Фрязино, ул. Московская, 15</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="header-main">
+                <a href="index.html" class="logo">
+                    <i class="fas fa-stethoscope"></i>
+                    <span>ЛОР-Клиника</span>
+                </a>
+                
+                <nav class="nav">
+                    <ul class="nav-list">
+                        <li><a href="index.html" class="nav-link active">Главная</a></li>
+                        <li><a href="services.html" class="nav-link">Услуги</a></li>
+                        <li><a href="operations.html" class="nav-link">Операции</a></li>
+                        <li><a href="prices.html" class="nav-link">Цены</a></li>
+                        <li><a href="doctors.html" class="nav-link">Врачи</a></li>
+                        <li><a href="appointment.html" class="nav-link">Запись</a></li>
+                        <li><a href="contacts.html" class="nav-link">Контакты</a></li>
+                        <li><a href="about.html" class="nav-link">О клинике</a></li>
+                    </ul>
+                </nav>
+                
+                <!-- БЛОК АВТОРИЗАЦИИ -->
+                <div class="auth-buttons" id="authButtons">
+                    <!-- Заполняется JavaScript -->
+                </div>
+                
+                <button class="burger">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ОСТАЛЬНОЙ КОД БЕЗ ИЗМЕНЕНИЙ -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Специализированная ЛОР-помощь</h1>
+                <p class="hero-subtitle">Лечение заболеваний уха, горла, носа с использованием современного оборудования и передовых методик</p>
+                <div class="hero-buttons">
+                    <a href="appointment.html" class="btn btn-primary">
+                        <i class="fas fa-calendar-check"></i>
+                        Записаться на приём
+                    </a>
+                    <a href="services.html" class="btn btn-secondary">
+                        <i class="fas fa-stethoscope"></i>
+                        Наши услуги
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="emergency-card">
+                <div class="emergency-icon">
+                    <i class="fas fa-ambulance"></i>
+                </div>
+                <div class="emergency-content">
+                    <h2>Экстренная ЛОР-помощь</h2>
+                    <p>При острых состоянияы, травмах, кровотечениях, инородных телах:</p>
+                    <div class="emergency-phone">+7 (999) 325-88-075</div>
+                    <p class="emergency-note">Круглосуточно, приём без записи в экстренных случаях</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Наши услуги</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-ear"></i>
+                    </div>
+                    <h3 class="service-title">Диагностика слуха</h3>
+                    <p class="service-desc">Аудиометрия, тимпанометрия, подбор слуховых аппаратов</p>
+                    <a href="services.html#hearing" class="btn btn-secondary">Подробнее</a>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-head-side-virus"></i>
+                    </div>
+                    <h3 class="service-title">Лечение синуситов</h3>
+                    <p class="service-desc">Эндоскопия пазух, лечение гайморита, фронтита</p>
+                    <a href="services.html#sinus" class="btn btn-secondary">Подробнее</a>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-throat"></i>
+                    </div>
+                    <h3 class="service-title">Заболевания горла</h3>
+                    <p class="service-desc">Тонзиллит, фарингит, лечение храпа</p>
+                    <a href="services.html#throat" class="btn btn-secondary">Подробнее</a>
+                </div>
+            </div>
+            <div class="section-cta">
+                <a href="services.html" class="btn btn-primary">Все услуги</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" style="background: var(--gray-100);">
+        <div class="container">
+            <h2 class="section-title">Почему выбирают нас</h2>
+            <div class="advantages-grid">
+                <div class="advantage-card">
+                    <div class="advantage-icon">
+                        <i class="fas fa-user-md"></i>
+                    </div>
+                    <h3>Опытные врачи</h3>
+                    <p>15 ЛОР-хирургов высшей категории, кандидаты и доктора медицинских наук</p>
+                </div>
+                
+                <div class="advantage-card">
+                    <div class="advantage-icon">
+                        <i class="fas fa-microscope"></i>
+                    </div>
+                    <h3>Современное оборудование</h3>
+                    <p>Эндоскопы, микроскопы, лазерные установки, собственная операционная</p>
+                </div>
+                
+                <div class="advantage-card">
+                    <div class="advantage-icon">
+                        <i class="fas fa-history"></i>
+                    </div>
+                    <h3>18 лет опыта</h3>
+                    <p>Работаем с 2005 года, более 10 000 успешных операций</p>
+                </div>
+                
+                <div class="advantage-card">
+                    <div class="advantage-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Удобный график</h3>
+                    <p>Работаем без выходных, экстренная помощь круглосуточно</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <h4 class="footer-title">ЛОР-Клиника</h4>
+                    <p>Специализированная клиника лечения заболеваний уха, горла, носа с 2005 года.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-vk"></i></a>
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="footer-title">Контакты</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> г. Фрязино, ул. Московская, 15</p>
+                    <p><i class="fas fa-phone"></i> +7 (495) 123-45-67</p>
+                    <p><i class="fas fa-envelope"></i> info@lor-clinic.ru</p>
+                </div>
+                <div>
+                    <h4 class="footer-title">Часы работы</h4>
+                    <p><i class="fas fa-clock"></i> Пн-Пт: 8:00-21:00</p>
+                    <p><i class="fas fa-clock"></i> Сб-Вс: 9:00-18:00</p>
+                    <p><i class="fas fa-ambulance"></i> Экстренно: круглосуточно</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 ЛОР-клиника. Лицензия № ЛО-77-01-012345</p>
+                <p>Сайт не является публичной офертой</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="theme-switcher">
+        <div class="theme-buttons">
+            <button class="theme-btn active" data-theme="light" title="Светлая тема">
+                <i class="fas fa-sun"></i>
+            </button>
+            <button class="theme-btn" data-theme="dark" title="Тёмная тема">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

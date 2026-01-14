@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Профиль - ЛОР-клиника</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="theme.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-top">
+                <div class="header-contacts">
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+7 (495) 123-45-67</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <span>Пн-Пт: 8:00-21:00, Сб-Вс: 9:00-18:00</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>г. Фрязино, ул. Московская, 15</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="header-main">
+                <a href="index.html" class="logo">
+                    <i class="fas fa-stethoscope"></i>
+                    <span>ЛОР-Клиника</span>
+                </a>
+                
+                <nav class="nav">
+                    <ul class="nav-list">
+                        <li><a href="index.html" class="nav-link">Главная</a></li>
+                        <li><a href="services.html" class="nav-link">Услуги</a></li>
+                        <li><a href="operations.html" class="nav-link">Операции</a></li>
+                        <li><a href="prices.html" class="nav-link">Цены</a></li>
+                        <li><a href="doctors.html" class="nav-link">Врачи</a></li>
+                        <li><a href="appointment.html" class="nav-link">Запись</a></li>
+                        <li><a href="contacts.html" class="nav-link">Контакты</a></li>
+                        <li><a href="about.html" class="nav-link">О клинике</a></li>
+                    </ul>
+                </nav>
+                
+                <!-- БЛОК АВТОРИЗАЦИИ -->
+                <div class="auth-buttons" id="authButtons">
+                    <!-- Заполняется JavaScript -->
+                </div>
+                
+                <button class="burger">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="section">
+        <div class="container">
+            <div id="userProfile" style="max-width: 800px; margin: 0 auto;">
+                <h2 style="color: var(--primary); margin-bottom: 30px;">
+                    <i class="fas fa-user-circle"></i> Личный кабинет
+                </h2>
+                
+                <!-- Информация пользователя -->
+                <div id="userInfo" class="service-card" style="margin-bottom: 30px;">
+                    <!-- Заполняется JS -->
+                </div>
+                
+                <!-- Записи пользователя -->
+                <div class="service-card">
+                    <h3 style="color: var(--primary); margin-bottom: 20px;">
+                        <i class="fas fa-calendar-check"></i> Мои записи
+                    </h3>
+                    
+                    <div id="appointmentList">
+                        <!-- Заполняется JS -->
+                    </div>
+                    
+                    <div id="noAppointments" style="color: var(--gray-600); font-style: italic; text-align: center; padding: 20px;">
+                        У вас пока нет записей на приём
+                    </div>
+                    
+                    <div style="margin-top: 30px; display: flex; gap: 15px; justify-content: center;">
+                        <button class="btn btn-primary" onclick="window.location.href='appointment.html'">
+                            <i class="fas fa-calendar-plus"></i> Новая запись
+                        </button>
+                        <button id="logoutBtn" class="btn btn-secondary">
+                            <i class="fas fa-sign-out-alt"></i> Выйти
+                        </button>
+                    </div>
+                </div>
+            </div>
+    </main>
+
+    <script>
+    class ProfileSystem {
+        constructor() {
+            this.currentUser = null;
+            this.init();
+        }
+        
+        init() {
+            this.checkAuth();
+            if (this.currentUser) {
+                this.loadUserInfo();
+                this.loadAppointments();
+                this.setupEventListeners();
+            } else {
+                this.showLoginRequired();
+            }
+        }
+        
+        checkAuth() {
+            this.currentUser = JSON.parse(localStorage.getItem('lorCurrentUser'));
+        }
+        
+        showLoginRequired() {
+            document.getElementById('userProfile').style.display = 'none';
+            document.getElementById('loginRequired').style.display = 'block';
+        }
+        
+        loadUserInfo() {
+            const userInfo = document.getElementById('userInfo');
+            if (!userInfo || !this.currentUser) return;
+            
+            userInfo.innerHTML = `
+                <h3 style="color: var(--primary); margin-bottom: 20px;">Личные данные</h3>
+                <div style="display: grid; grid-template-columns: auto 1fr; gap: 15px; font-size: 16px;">
+                    <div style="font-weight: 500; color: var(--gray-700);">ФИО:</div>
+                    <div style="color: var(--primary); font-weight: 600;">
+                        ${this.currentUser.lastName} ${this.currentUser.firstName} ${this.currentUser.middleName || ''}
+                    </div>
+                    
+                    <div style="font-weight: 500; color: var(--gray-700);">Дата рождения:</div>
+                    <div>${this.formatDate(this.currentUser.birthDate)}</div>
+                    
+                    <div style="font-weight: 500; color: var(--gray-700);">Телефон:</div>
+                    <div>${this.currentUser.phone}</div>
+                    
+                    <div style="font-weight: 500; color: var(--gray-700);">Email:</div>
+                    <div>${this.currentUser.email}</div>
+                    
+                    <div style="font-weight: 500; color: var(--gray-700);">Дата регистрации:</div>
+                    <div>${this.formatDate(this.currentUser.registrationDate)}</div>
+                </div>
+            `;
+        }
+        
+        formatDate(dateString) {
+            if (!dateString) return 'Не указана';
+            return new Date(dateString).toLocaleDateString('ru-RU');
+        }
+        
+        loadAppointments() {
+            const appointmentList = document.getElementById('appointmentList');
+            const noAppointments = document.getElementById('noAppointments');
+            
+            if (!appointmentList || !noAppointments || !this.currentUser) return;
+            
+            // Берем записи из appointment.js (из localStorage)
+            const appointments = JSON.parse(localStorage.getItem('lorAppointments') || '[]');
+            const userAppointments = appointments.filter(app => 
+                app.userId === this.currentUser.id || 
+                app.email === this.currentUser.email
+            );
+            
+            appointmentList.innerHTML = '';
+            
+            if (userAppointments.length === 0) {
+                noAppointments.style.display = 'block';
+                return;
+            }
+            
+            noAppointments.style.display = 'none';
+            
+            // Сортируем по дате
+            userAppointments.sort((a, b) => new Date(a.date) - new Date(b.date));
+            
+            userAppointments.forEach(appointment => {
+                const date = new Date(appointment.date);
+                const appointmentDiv = document.createElement('div');
+                appointmentDiv.className = 'appointment-item';
+                appointmentDiv.style.cssText = `
+                    padding: 15px;
+                    margin-bottom: 15px;
+                    background: var(--gray-100);
+                    border-radius: 8px;
+                    border-left: 4px solid var(--primary);
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    flex-wrap: wrap;
+                `;
+                
+                appointmentDiv.innerHTML = `
+                    <div style="flex: 1;">
+                        <div style="font-weight: 600; color: var(--primary); margin-bottom: 5px;">
+                            ${date.toLocaleDateString('ru-RU', { 
+                                day: 'numeric', 
+                                month: 'long', 
+                                year: 'numeric',
+                                weekday: 'long'
+                            })} в ${appointment.time}
+                        </div>
+                        <div style="color: var(--gray-600); font-size: 14px; margin-bottom: 5px;">
+                            <i class="fas fa-user-md"></i> Врач: ${appointment.doctor ? 'Доктор ' + appointment.doctor : 'Не указан'}
+                        </div>
+                        <div style="color: var(--gray-600); font-size: 14px;">
+                            <i class="fas fa-stethoscope"></i> Услуги: ${appointment.services?.join(', ') || 'Не выбраны'}
+                        </div>
+                    </div>
+                    <div style="display: flex; gap: 10px; margin-top: 10px;">
+                        <button class="btn-cancel" data-id="${appointment.id}" 
+                                style="background: var(--danger); color: white; border: none; 
+                                    padding: 5px 10px; border-radius: 4px; cursor: pointer;
+                                    font-size: 12px;">
+                            <i class="fas fa-times"></i> Отменить
+                        </button>
+                        <button onclick="window.location.href='appointment.html?id=${appointment.id}'" 
+                                style="background: var(--primary); color: white; border: none; 
+                                    padding: 5px 10px; border-radius: 4px; cursor: pointer;
+                                    font-size: 12px;">
+                            <i class="fas fa-edit"></i> Изменить
+                        </button>
+                    </div>
+                `;
+                
+                appointmentList.appendChild(appointmentDiv);
+            });
+            
+            // Назначаем обработчики отмены
+            appointmentList.querySelectorAll('.btn-cancel').forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    const appointmentId = parseInt(e.target.dataset.id);
+                    this.cancelAppointment(appointmentId);
+                });
+            });
+        }
+        
+        cancelAppointment(appointmentId) {
+            if (!confirm('Вы уверены, что хотите отменить эту запись?')) return;
+            
+            const appointments = JSON.parse(localStorage.getItem('lorAppointments') || '[]');
+            const updatedAppointments = appointments.filter(app => app.id !== appointmentId);
+            localStorage.setItem('lorAppointments', JSON.stringify(updatedAppointments));
+            
+            this.loadAppointments();
+            alert('Запись успешно отменена');
+        }
+        
+        setupEventListeners() {
+            document.getElementById('logoutBtn')?.addEventListener('click', () => {
+                localStorage.removeItem('lorCurrentUser');
+                window.location.href = 'index.html';
+            });
+        }
+    }
+    
+    // Инициализация
+    document.addEventListener('DOMContentLoaded', () => {
+        new ProfileSystem();
+    });
+    </script>
+</body>
+</html>

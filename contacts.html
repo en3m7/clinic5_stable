@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты | ЛОР-клиника</title>
+    <meta name="description" content="Контактная информация ЛОР-клиники: адрес, телефоны, схема проезда, часы работы.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="theme.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-top">
+                <div class="header-contacts">
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+7 (495) 123-45-67</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <span>Пн-Пт: 8:00-21:00, Сб-Вс: 9:00-18:00</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>г. Фрязино, ул. Московская, 15</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="header-main">
+                <a href="index.html" class="logo">
+                    <i class="fas fa-stethoscope"></i>
+                    <span>ЛОР-Клиника</span>
+                </a>
+                
+                <nav class="nav">
+                    <ul class="nav-list">
+                        <li><a href="index.html" class="nav-link">Главная</a></li>
+                        <li><a href="services.html" class="nav-link">Услуги</a></li>
+                        <li><a href="operations.html" class="nav-link">Операции</a></li>
+                        <li><a href="prices.html" class="nav-link">Цены</a></li>
+                        <li><a href="doctors.html" class="nav-link">Врачи</a></li>
+                        <li><a href="appointment.html" class="nav-link">Запись</a></li>
+                        <li><a href="contacts.html" class="nav-link active">Контакты</a></li>
+                        <li><a href="about.html" class="nav-link">О клинике</a></li>
+                    </ul>
+                </nav>
+                
+                <!-- БЛОК АВТОРИЗАЦИИ -->
+                <div class="auth-buttons" id="authButtons">
+                    <!-- Заполняется JavaScript -->
+                </div>
+                
+                <button class="burger">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Контакты</h1>
+                <p class="hero-subtitle">Как нас найти и связаться с нами</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3 class="service-title">Адрес клиники</h3>
+                    <p>г. Фрязино, ул. Московская, 15</p>
+                    <p><strong>Метро:</strong> ближайшая станция "Щёлковская"</p>
+                    <p><strong>Автобусы:</strong> № 396, 485, 506 до остановки "Улица Московская"</p>
+                    <p><strong>Автомобиль:</strong> парковка на территории клиники</p>
+                    <a href="#map" class="btn btn-secondary">Смотреть на карте</a>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3 class="service-title">Часы работы</h3>
+                    <p><strong>Понедельник - Пятница:</strong> 8:00 - 21:00</p>
+                    <p><strong>Суббота:</strong> 9:00 - 18:00</p>
+                    <p><strong>Воскресенье:</strong> 9:00 - 18:00</p>
+                    <p><strong>Экстренная помощь:</strong> круглосуточно</p>
+                    <p style="font-size: 14px; color: var(--gray-600); margin-top: 15px;">
+                        * Последний пациент принимается за 30 минут до закрытия
+                    </p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <h3 class="service-title">Телефоны</h3>
+                    <p><strong>Единый номер:</strong> +7 (495) 123-45-67</p>
+                    <p><strong>Регистратура:</strong> +7 (495) 123-45-68</p>
+                    <p><strong>Экстренная помощь:</strong> +7 (999) 325-88-075</p>
+                    <p><strong>Email:</strong> info@lor-clinic.ru</p>
+                    <p><strong>WhatsApp/Telegram:</strong> +7 (999) 123-45-67</p>
+                    <a href="appointment.html" class="btn btn-primary">Онлайн-запись</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" style="background: var(--gray-100);" id="map">
+        <div class="container">
+            <h2 class="section-title">Схема проезда</h2>
+            <div class="service-card" style="max-width: 1000px; margin: 0 auto; padding: 30px;">
+                <h3 style="margin-bottom: 20px;">Как добраться до клиники</h3>
+                
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-bottom: 30px;">
+                    <div>
+                        <h4>На общественном транспорте</h4>
+                        <ul>
+                            <li><strong>Метро:</strong> станция "Щёлковская", далее автобус №396 до остановки "Улица Московская"</li>
+                            <li><strong>Электричка:</strong> с Ярославского вокзала до станции "Фрязино-Пассажирская", далее 10 минут пешком</li>
+                            <li><strong>Автобусы:</strong> № 396, 485, 506 от метро "Щёлковская"</li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h4>На автомобиле</h4>
+                        <ul>
+                            <li><strong>С МКАД:</strong> съезд на Щёлковское шоссе, далее 7 км до Фрязино</li>
+                            <li><strong>Парковка:</strong> бесплатная охраняемая парковка на 50 мест на территории клиники</li>
+                            <li><strong>Навигатор:</strong> координаты: 55.9594° N, 38.0455° E</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Карта (заглушка) -->
+                <div style="background: var(--primary-light); border-radius: 10px; padding: 20px; text-align: center; margin-top: 20px;">
+                    <i class="fas fa-map fa-3x" style="color: var(--primary); margin-bottom: 15px;"></i>
+                    <h4>Карта проезда</h4>
+                    <p>Здесь будет интерактивная карта с маршрутом проезда</p>
+                    <button class="btn btn-primary" onclick="alert('В реальном сайте здесь будет Яндекс.Карта или Google Maps')">
+                        <i class="fas fa-external-link-alt"></i>
+                        Открыть в Яндекс.Картах
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Обратная связь</h2>
+            <div class="service-card" style="max-width: 800px; margin: 0 auto;">
+                <h3>Задать вопрос или оставить отзыв</h3>
+                <form style="margin-top: 20px;">
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label class="form-label required">Ваше имя</label>
+                            <input type="text" class="form-input" required placeholder="Иванов Иван">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label required">Телефон</label>
+                            <input type="tel" class="form-input" required placeholder="+7 (999) 123-45-67">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Email</label>
+                        <input type="email" class="form-input" placeholder="ваш@email.ru">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label required">Тема сообщения</label>
+                        <select class="form-input" required>
+                            <option value="">Выберите тему</option>
+                            <option>Вопрос о услугах</option>
+                            <option>Запись на приём</option>
+                            <option>Отзыв о клинике</option>
+                            <option>Жалоба</option>
+                            <option>Сотрудничество</option>
+                            <option>Другое</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label required">Сообщение</label>
+                        <textarea class="form-input" rows="5" required placeholder="Опишите ваш вопрос..."></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label style="display: flex; align-items: flex-start; gap: 10px; cursor: pointer;">
+                            <input type="checkbox" required style="margin-top: 3px;">
+                            <span style="font-size: 14px;">Я согласен на обработку персональных данных и принимаю <a href="#" style="color: var(--primary);">политику конфиденциальности</a></span>
+                        </label>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fas fa-paper-plane"></i>
+                        Отправить сообщение
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <h4 class="footer-title">ЛОР-Клиника</h4>
+                    <p>Специализированная клиника лечения заболеваний уха, горла, носа с 2005 года.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-vk"></i></a>
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="footer-title">Контакты</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> г. Фрязино, ул. Московская, 15</p>
+                    <p><i class="fas fa-phone"></i> +7 (495) 123-45-67</p>
+                    <p><i class="fas fa-envelope"></i> info@lor-clinic.ru</p>
+                </div>
+                <div>
+                    <h4 class="footer-title">Часы работы</h4>
+                    <p><i class="fas fa-clock"></i> Пн-Пт: 8:00-21:00</p>
+                    <p><i class="fas fa-clock"></i> Сб-Вс: 9:00-18:00</p>
+                    <p><i class="fas fa-ambulance"></i> Экстренно: круглосуточно</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 ЛОР-клиника. Лицензия № ЛО-77-01-012345</p>
+                <p>Сайт не является публичной офертой</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="theme-switcher">
+        <div class="theme-buttons">
+            <button class="theme-btn active" data-theme="light" title="Светлая тема">
+                <i class="fas fa-sun"></i>
+            </button>
+            <button class="theme-btn" data-theme="dark" title="Тёмная тема">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

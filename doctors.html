@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Наши врачи | ЛОР-клиника</title>
+    <meta name="description" content="Опытные ЛОР-врачи высшей категории, кандидаты и доктора медицинских наук. Современные методики лечения.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="theme.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-top">
+                <div class="header-contacts">
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+7 (495) 123-45-67</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <span>Пн-Пт: 8:00-21:00, Сб-Вс: 9:00-18:00</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>г. Фрязино, ул. Московская, 15</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="header-main">
+                <a href="index.html" class="logo">
+                    <i class="fas fa-stethoscope"></i>
+                    <span>ЛОР-Клиника</span>
+                </a>
+                
+                <nav class="nav">
+                    <ul class="nav-list">
+                        <li><a href="index.html" class="nav-link">Главная</a></li>
+                        <li><a href="services.html" class="nav-link">Услуги</a></li>
+                        <li><a href="operations.html" class="nav-link">Операции</a></li>
+                        <li><a href="prices.html" class="nav-link">Цены</a></li>
+                        <li><a href="doctors.html" class="nav-link active">Врачи</a></li>
+                        <li><a href="appointment.html" class="nav-link">Запись</a></li>
+                        <li><a href="contacts.html" class="nav-link">Контакты</a></li>
+                        <li><a href="about.html" class="nav-link">О клинике</a></li>
+                    </ul>
+                </nav>
+                
+                <!-- БЛОК АВТОРИЗАЦИИ -->
+                <div class="auth-buttons" id="authButtons">
+                    <!-- Заполняется JavaScript -->
+                </div>
+                
+                <button class="burger">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Наши врачи</h1>
+                <p class="hero-subtitle">ЛОР-хирурги высшей категории, кандидаты и доктора медицинских наук</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Ведущие специалисты</h2>
+            <div class="doctors-grid">
+                <!-- Врач 1 -->
+                <div class="doctor-card">
+                    <div class="doctor-badge available">Доступен сегодня</div>
+                    <div class="doctor-avatar">
+                        <i class="fas fa-user-md"></i>
+                    </div>
+                    <h3 class="doctor-name">Иванов А. В.</h3>
+                    <p class="doctor-specialty">ЛОР-хирург высшей категории</p>
+                    
+                    <div class="doctor-info">
+                        <div class="info-item">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span>Д.м.н., профессор</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-history"></i>
+                            <span>Стаж 25 лет</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-star"></i>
+                            <span>4.9/5 рейтинг</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-award"></i>
+                            <span>Заслуженный врач РФ</span>
+                        </div>
+                    </div>
+                    
+                    <p style="color: var(--gray-600); margin: 15px 0; font-size: 14px; line-height: 1.5;">
+                        Специализация: ринохирургия, септопластика, операции на околоносовых пазухах. 
+                        Выполнил более 5000 успешных операций.
+                    </p>
+                    
+                    <div class="doctor-schedule">
+                        <div class="schedule-title">
+                            <i class="fas fa-calendar-alt"></i>
+                            График работы
+                        </div>
+                        <div class="schedule-days">Пн, Вт, Чт, Пт</div>
+                        <div class="schedule-hours">9:00 - 18:00</div>
+                    </div>
+                    
+                    <a href="appointment.html" class="btn btn-primary" style="width: 100%; margin-top: 20px;">
+                        <i class="fas fa-calendar-check"></i>
+                        Записаться на приём
+                    </a>
+                </div>
+                
+                <!-- Врач 2 -->
+                <div class="doctor-card">
+                    <div class="doctor-badge tomorrow">Доступен завтра</div>
+                    <div class="doctor-avatar">
+                        <i class="fas fa-user-md"></i>
+                    </div>
+                    <h3 class="doctor-name">Петрова Е. С.</h3>
+                    <p class="doctor-specialty">Детский ЛОР, к.м.н.</p>
+                    
+                    <div class="doctor-info">
+                        <div class="info-item">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span>К.м.н.</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-history"></i>
+                            <span>Стаж 18 лет</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-star"></i>
+                            <span>4.8/5 рейтинг</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-child"></i>
+                            <span>Детский специалист</span>
+                        </div>
+                    </div>
+                    
+                    <p style="color: var(--gray-600); margin: 15px 0; font-size: 14px; line-height: 1.5;">
+                        Специализация: детская ЛОР-хирургия, аденотомия, лечение хронических тонзиллитов у детей.
+                        Автор 25 научных работ.
+                    </p>
+                    
+                    <div class="doctor-schedule">
+                        <div class="schedule-title">
+                            <i class="fas fa-calendar-alt"></i>
+                            График работы
+                        </div>
+                        <div class="schedule-days">Ср, Сб</div>
+                        <div class="schedule-hours">10:00 - 17:00</div>
+                    </div>
+                    
+                    <a href="appointment.html" class="btn btn-primary" style="width: 100%; margin-top: 20px;">
+                        <i class="fas fa-calendar-check"></i>
+                        Записаться на приём
+                    </a>
+                </div>
+                
+                <!-- Врач 3 -->
+                <div class="doctor-card">
+                    <div class="doctor-badge available">Доступен сегодня</div>
+                    <div class="doctor-avatar">
+                        <i class="fas fa-user-md"></i>
+                    </div>
+                    <h3 class="doctor-name">Сидоров Д. К.</h3>
+                    <p class="doctor-specialty">ЛОР-онколог, хирург</p>
+                    
+                    <div class="doctor-info">
+                        <div class="info-item">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span>К.м.н.</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-history"></i>
+                            <span>Стаж 20 лет</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-star"></i>
+                            <span>4.7/5 рейтинг</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-stethoscope"></i>
+                            <span>Онколог-хирург</span>
+                        </div>
+                    </div>
+                    
+                    <p style="color: var(--gray-600); margin: 15px 0; font-size: 14px; line-height: 1.5;">
+                        Специализация: опухоли ЛОР-органов, реконструктивная хирургия, микрохирургия гортани.
+                        Член European Laryngological Society.
+                    </p>
+                    
+                    <div class="doctor-schedule">
+                        <div class="schedule-title">
+                            <i class="fas fa-calendar-alt"></i>
+                            График работы
+                        </div>
+                        <div class="schedule-days">Пн, Ср, Пт</div>
+                        <div class="schedule-hours">10:00 - 19:00</div>
+                    </div>
+                    
+                    <a href="appointment.html" class="btn btn-primary" style="width: 100%; margin-top: 20px;">
+                        <i class="fas fa-calendar-check"></i>
+                        Записаться на приём
+                    </a>
+                </div>
+                
+                <!-- Врач 4 -->
+                <div class="doctor-card">
+                    <div class="doctor-badge tomorrow">Доступен завтра</div>
+                    <div class="doctor-avatar">
+                        <i class="fas fa-user-md"></i>
+                    </div>
+                    <h3 class="doctor-name">Козлова М. И.</h3>
+                    <p class="doctor-specialty">Сурдолог-оториноларинголог</p>
+                    
+                    <div class="doctor-info">
+                        <div class="info-item">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span>К.м.н.</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-history"></i>
+                            <span>Стаж 15 лет</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-star"></i>
+                            <span>4.9/5 рейтинг</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-deaf"></i>
+                            <span>Сурдолог</span>
+                        </div>
+                    </div>
+                    
+                    <p style="color: var(--gray-600); margin: 15px 0; font-size: 14px; line-height: 1.5;">
+                        Специализация: нарушения слуха, тимпанопластика, стапедопластика, слухопротезирование.
+                        Сертифицированный аудиолог.
+                    </p>
+                    
+                    <div class="doctor-schedule">
+                        <div class="schedule-title">
+                            <i class="fas fa-calendar-alt"></i>
+                            График работы
+                        </div>
+                        <div class="schedule-days">Вт, Чт, Сб</div>
+                        <div class="schedule-hours">9:00 - 16:00</div>
+                    </div>
+                    
+                    <a href="appointment.html" class="btn btn-primary" style="width: 100%; margin-top: 20px;">
+                        <i class="fas fa-calendar-check"></i>
+                        Записаться на приём
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" style="background: var(--gray-100);">
+        <div class="container">
+            <h2 class="section-title">Научные достижения врачей</h2>
+            <div class="advantages-grid">
+                <div class="advantage-card">
+                    <div class="advantage-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>2 профессора</h3>
+                    <p>Доктора медицинских наук, профессоры с многолетним опытом</p>
+                </div>
+                
+                <div class="advantage-card">
+                    <div class="advantage-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h3>150+ научных работ</h3>
+                    <p>Публикации в российских и международных медицинских журналах</p>
+                </div>
+                
+                <div class="advantage-card">
+                    <div class="advantage-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h3>25+ патентов</h3>
+                    <p>Авторские методики и патенты на изобретения в области ЛОР-хирургии</p>
+                </div>
+                
+                <div class="advantage-card">
+                    <div class="advantage-icon">
+                        <i class="fas fa-user-graduate"></i>
+                    </div>
+                    <h3>Обучение специалистов</h3>
+                    <p>Проводят мастер-классы и обучают молодых ЛОР-хирургов</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <h4 class="footer-title">ЛОР-Клиника</h4>
+                    <p>Специализированная клиника лечения заболеваний уха, горла, носа с 2005 года.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-vk"></i></a>
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="footer-title">Контакты</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> г. Фрязино, ул. Московская, 15</p>
+                    <p><i class="fas fa-phone"></i> +7 (495) 123-45-67</p>
+                    <p><i class="fas fa-envelope"></i> info@lor-clinic.ru</p>
+                </div>
+                <div>
+                    <h4 class="footer-title">Часы работы</h4>
+                    <p><i class="fas fa-clock"></i> Пн-Пт: 8:00-21:00</p>
+                    <p><i class="fas fa-clock"></i> Сб-Вс: 9:00-18:00</p>
+                    <p><i class="fas fa-ambulance"></i> Экстренно: круглосуточно</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 ЛОР-клиника. Лицензия № ЛО-77-01-012345</p>
+                <p>Сайт не является публичной офертой</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="theme-switcher">
+        <div class="theme-buttons">
+            <button class="theme-btn active" data-theme="light" title="Светлая тема">
+                <i class="fas fa-sun"></i>
+            </button>
+            <button class="theme-btn" data-theme="dark" title="Тёмная тема">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

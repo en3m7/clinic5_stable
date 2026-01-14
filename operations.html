@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ЛОР-операции | ЛОР-клиника</title>
+    <meta name="description" content="Современные ЛОР-операции: септопластика, тонзиллэктомия, аденотомия, тимпанопластика. Быстрое восстановление.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="theme.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-top">
+                <div class="header-contacts">
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+7 (495) 123-45-67</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <span>Пн-Пт: 8:00-21:00, Сб-Вс: 9:00-18:00</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>г. Фрязино, ул. Московская, 15</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="header-main">
+                <a href="index.html" class="logo">
+                    <i class="fas fa-stethoscope"></i>
+                    <span>ЛОР-Клиника</span>
+                </a>
+                
+                <nav class="nav">
+                    <ul class="nav-list">
+                        <li><a href="index.html" class="nav-link">Главная</a></li>
+                        <li><a href="services.html" class="nav-link">Услуги</a></li>
+                        <li><a href="operations.html" class="nav-link active">Операции</a></li>
+                        <li><a href="prices.html" class="nav-link">Цены</a></li>
+                        <li><a href="doctors.html" class="nav-link">Врачи</a></li>
+                        <li><a href="appointment.html" class="nav-link">Запись</a></li>
+                        <li><a href="contacts.html" class="nav-link">Контакты</a></li>
+                        <li><a href="about.html" class="nav-link">О клинике</a></li>
+                    </ul>
+                </nav>
+                
+                <!-- БЛОК АВТОРИЗАЦИИ -->
+                <div class="auth-buttons" id="authButtons">
+                    <!-- Заполняется JavaScript -->
+                </div>
+                
+                <button class="burger">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">ЛОР-операции</h1>
+                <p class="hero-subtitle">Современная хирургия заболеваний уха, горла и носа. Малоинвазивные методы, быстрое восстановление</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Операции на носу и пазухах</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3 class="service-title">Септопластика</h3>
+                    <p>Исправление искривлённой носовой перегородки. Эндоскопическая методика, восстановление 5-7 дней.</p>
+                    <ul>
+                        <li>Эндоскопический контроль</li>
+                        <li>Минимальная травматичность</li>
+                        <li>Быстрое восстановление</li>
+                        <li>Стационар 1 день</li>
+                    </ul>
+                    <div class="service-price">от 45 000 ₽</div>
+                    <button class="btn btn-primary" data-modal="appointment">Консультация</button>
+                </div>
+                
+                <div class="service-card">
+                    <h3 class="service-title">Полипотомия носа</h3>
+                    <p>Удаление полипов из носа и пазух. Эндоскопическая операция, рецидив менее 15%.</p>
+                    <ul>
+                        <li>Эндоскопическое удаление</li>
+                        <li>Сохранение здоровой слизистой</li>
+                        <li>Минимальный риск рецидива</li>
+                        <li>Амбулаторно</li>
+                    </ul>
+                    <div class="service-price">от 35 000 ₽</div>
+                    <button class="btn btn-primary" data-modal="appointment">Консультация</button>
+                </div>
+                
+                <div class="service-card">
+                    <h3 class="service-title">Вазотомия</h3>
+                    <p>Лечение вазомоторного ринита. Лазерная или радиоволновая методика, амбулаторно.</p>
+                    <ul>
+                        <li>Лазерная/радиоволновая</li>
+                        <li>Без тампонады</li>
+                        <li>Амбулаторно</li>
+                        <li>Восстановление 3-5 дней</li>
+                    </ul>
+                    <div class="service-price">от 20 000 ₽</div>
+                    <button class="btn btn-primary" data-modal="appointment">Консультация</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" style="background: var(--gray-100);">
+        <div class="container">
+            <h2 class="section-title">Операции на горле и миндалинах</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3 class="service-title">Тонзиллэктомия</h3>
+                    <p>Удаление нёбных миндалин. Коблационная, лазерная или классическая методика.</p>
+                    <ul>
+                    <li>Коблационная технология</li>
+                    <li>Минимальная кровопотеря</li>
+                    <li>Меньшая болезненность</li>
+                    <li>Стационар 1-2 дня</li>
+                    </ul>
+                <div class="service-price">от 30 000 ₽</div>
+            <button class="btn btn-primary" data-modal="appointment">Консультация</button>
+        </div>
+         <div class="service-card">
+                <h3 class="service-title">Аденотомия</h3>
+                <p>Удаление аденоидов у детей и взрослых. Эндоскопический контроль, щадящие методы.</p>
+                <ul>
+                    <li>Эндоскопический контроль</li>
+                    <li>Полное удаление ткани</li>
+                    <li>Минимальный риск рецидива</li>
+                    <li>Стационар 1 день</li>
+                </ul>
+                <div class="service-price">от 25 000 ₽</div>
+                <button class="btn btn-primary" data-modal="appointment">Консультация</button>
+            </div>
+            
+            <div class="service-card">
+                <h3 class="service-title">Увулопалатопластика</h3>
+                <p>Операция при храпе и апноэ. Коррекция мягкого нёба, уменьшение нёбного язычка.</p>
+                <ul>
+                    <li>Лазерная коррекция</li>
+                    <li>Улучшение дыхания во сне</li>
+                    <li>Амбулаторно</li>
+                    <li>Восстановление 7-10 дней</li>
+                </ul>
+                <div class="service-price">от 40 000 ₽</div>
+                <button class="btn btn-primary" data-modal="appointment">Консультация</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <h2 class="section-title">Операции на ухе</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <h3 class="service-title">Тимпанопластика</h3>
+                <p>Восстановление барабанной перепонки и слуховых косточек при хроническом отите.</p>
+                <ul>
+                    <li>Восстановление слуха</li>
+                    <li>Микрохирургическая техника</li>
+                    <li>Использование аутохряща</li>
+                    <li>Стационар 2-3 дня</li>
+                </ul>
+                <div class="service-price">от 50 000 ₽</div>
+                <button class="btn btn-primary" data-modal="appointment">Консультация</button>
+            </div>
+            
+            <div class="service-card">
+                <h3 class="service-title">Стапедопластика</h3>
+                <p>Операция при отосклерозе. Протезирование стремени, улучшение слуха.</p>
+                <ul>
+                    <li>Улучшение слуха на 90-95%</li>
+                    <li>Микрохирургическая техника</li>
+                    <li>Титановый протез</li>
+                    <li>Стационар 3-4 дня</li>
+                </ul>
+                <div class="service-price">от 70 000 ₽</div>
+                <button class="btn btn-primary" data-modal="appointment">Консультация</button>
+            </div>
+            
+            <div class="service-card">
+                <h3 class="service-title">Шунтирование барабанной полости</h3>
+                <p>Установка шунта при экссудативном отите у детей и взрослых.</p>
+                <ul>
+                    <li>Быстрое улучшение слуха</li>
+                    <li>Профилактика осложнений</li>
+                    <li>Амбулаторно</li>
+                    <li>Шунт на 6-12 месяцев</li>
+                </ul>
+                <div class="service-price">от 15 000 ₽</div>
+                <button class="btn btn-primary" data-modal="appointment">Консультация</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section" style="background: var(--primary-light);">
+    <div class="container">
+        <h2 class="section-title">Частые вопросы об операциях</h2>
+        <div class="service-card" style="max-width: 800px; margin: 0 auto;">
+            <h3>Сколько длится восстановление после септопластики?</h3>
+            <p>Тампоны удаляют на 3-5 день, отёк спадает через 7-10 дней, полное восстановление дыхания через 2-3 недели.</p>
+            
+            <h3 style="margin-top: 20px;">Больно ли удалять миндалины?</h3>
+            <p>Современные методы (коблация, лазер) минимизируют боль. Ощущения как при сильной ангине 5-7 дней.</p>
+            
+            <h3 style="margin-top: 20px;">Нужен ли стационар?</h3>
+            <p>Многие операции проводятся в условиях дневного стационара (1 день). Сложные операции требуют 2-3 дня наблюдения.</p>
+            
+            <h3 style="margin-top: 20px;">Как подготовиться к операции?</h3>
+            <p>Необходимы: общий анализ крови, коагулограмма, ЭКГ, флюорография, консультация терапевта.</p>
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div>
+                <h4 class="footer-title">ЛОР-Клиника</h4>
+                <p>Специализированная клиника лечения заболеваний уха, горла, носа с 2005 года.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-vk"></i></a>
+                    <a href="#"><i class="fab fa-telegram"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div>
+                <h4 class="footer-title">Контакты</h4>
+                <p><i class="fas fa-map-marker-alt"></i> г. Фрязино, ул. Московская, 15</p>
+                <p><i class="fas fa-phone"></i> +7 (495) 123-45-67</p>
+                <p><i class="fas fa-envelope"></i> info@lor-clinic.ru</p>
+            </div>
+            <div>
+                <h4 class="footer-title">Часы работы</h4>
+                <p><i class="fas fa-clock"></i> Пн-Пт: 8:00-21:00</p>
+                <p><i class="fas fa-clock"></i> Сб-Вс: 9:00-18:00</p>
+                <p><i class="fas fa-ambulance"></i> Экстренно: круглосуточно</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 ЛОР-клиника. Лицензия № ЛО-77-01-012345</p>
+            <p>Сайт не является публичной офертой</p>
+        </div>
+    </div>
+</footer>
+
+<!-- Модальное окно консультации -->
+<div class="modal" id="appointment">
+    <div class="modal-content">
+        <button class="modal-close">&times;</button>
+        <h2>Консультация хирурга</h2>
+        <form>
+            <div class="form-group">
+                <label class="form-label required">ФИО</label>
+                <input type="text" class="form-input" required placeholder="Иванов Иван Иванович">
+            </div>
+            <div class="form-group">
+                <label class="form-label required">Телефон</label>
+                <input type="tel" class="form-input" required placeholder="+7 (999) 123-45-67">
+            </div>
+            <div class="form-group">
+                <label class="form-label">Интересующая операция</label>
+                <select class="form-input">
+                    <option value="">Выберите операцию</option>
+                    <option>Септопластика</option>
+                    <option>Тонзиллэктомия</option>
+                    <option>Аденотомия</option>
+                    <option>Тимпанопластика</option>
+                    <option>Вазотомия</option>
+                    <option>Полипотомия</option>
+                    <option>Другое</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label class="form-label">Комментарий</label>
+                <textarea class="form-input" rows="3" placeholder="Опишите вашу проблему..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Записаться на консультацию</button>
+        </form>
+    </div>
+</div>
+
+<div class="theme-switcher">
+    <div class="theme-buttons">
+        <button class="theme-btn active" data-theme="light" title="Светлая тема">
+            <i class="fas fa-sun"></i>
+        </button>
+        <button class="theme-btn" data-theme="dark" title="Тёмная тема">
+            <i class="fas fa-moon"></i>
+        </button>
+    </div>
+</div>
+
+    <script src="script.js"></script>
+</body> 
+</html> 
